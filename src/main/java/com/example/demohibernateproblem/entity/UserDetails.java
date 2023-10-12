@@ -47,6 +47,7 @@ public class UserDetails {
     private LocalDateTime updatedAt;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "userDetails", fetch = FetchType.LAZY)
+    @Fetch(FetchMode.SUBSELECT)
     private List<Address> addresses;
 
 //    @Override
