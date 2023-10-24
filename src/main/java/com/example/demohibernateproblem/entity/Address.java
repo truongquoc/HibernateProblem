@@ -15,9 +15,8 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Address {
     @Id
-    @GeneratedValue(generator = "uuid2")
     @Column(name = "id")
-    private UUID id;
+    private String id;
 
     @Column(name = "address1")
     private String address1;

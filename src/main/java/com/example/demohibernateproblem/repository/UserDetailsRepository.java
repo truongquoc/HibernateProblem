@@ -11,10 +11,10 @@ import java.util.UUID;
 
 @Repository
 public interface UserDetailsRepository extends JpaRepository<UserDetails, UUID> {
-//    @EntityGraph(type = EntityGraph.EntityGraphType.FETCH, value = "UserDetails.addresses")
+    @EntityGraph(type = EntityGraph.EntityGraphType.FETCH, value = "UserDetails.addresses")
     List<UserDetails> findByNameContaining(String email);
 
 
-    @Query("select u from UserDetails u join fetch u.addresses")
-    List<UserDetails> findAll();
+//    @Query("select u from UserDetails u join fetch u.addresses")
+//    List<UserDetails> findAll();
 }

@@ -22,17 +22,17 @@ public class UserDTO {
         this.email = email;
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
     private String name;
     private String email;
-    private UUID id;
+    private String id;
 
     public List<AddressDTO> getAddressDTOS() {
         return addressDTOS;

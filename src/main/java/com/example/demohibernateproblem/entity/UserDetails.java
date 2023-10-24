@@ -24,10 +24,8 @@ import java.util.UUID;
 @NoArgsConstructor
 public class UserDetails {
     @Id
-    @GeneratedValue(generator = "uuid2")
     @Column(name = "id")
-//    @GenericGenerator(name = "system-uuid", strategy = "org.hibernate.id.UUIDGenerator")
-    private UUID id;
+    private String id;
 
     @Column(name = "name")
     private String name;
