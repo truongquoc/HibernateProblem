@@ -14,7 +14,11 @@ public interface UserDetailsRepository extends JpaRepository<UserDetails, UUID> 
     @EntityGraph(type = EntityGraph.EntityGraphType.FETCH, value = "UserDetails.addresses")
     List<UserDetails> findByNameContaining(String email);
 
+    @Query(value = "select * from user_details u where u.id = ?1", nativeQuery = true)
+    UserDetails findByUserId(String userId);
 
+    
+    UserDetails findByEmail();
 //    @Query("select u from UserDetails u join fetch u.addresses")
 //    List<UserDetails> findAll();
 }

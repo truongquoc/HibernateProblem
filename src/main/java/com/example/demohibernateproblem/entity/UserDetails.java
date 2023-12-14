@@ -21,6 +21,7 @@ import java.util.UUID;
 @Data
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 //@NamedEntityGraph(name = "UserDetails.addresses", attributeNodes = @NamedAttributeNode("addresses"))
+@NamedQuery(name = "UserEntity.findByUserId", query = "SELECT u FROM UserDetails u WHERE u.id=:userId")
 @NoArgsConstructor
 public class UserDetails {
     @Id
